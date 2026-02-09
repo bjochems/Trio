@@ -123,16 +123,17 @@ platform :ios do
       targets: ["LiveActivityExtension"]
     )
 
-    gym(
-      export_method: "app-store",
-      scheme: "Trio",
-      output_name: "Trio.ipa",
-      configuration: "Release",
-      destination: 'generic/platform=iOS',
-      buildlog_path: 'buildlog'
-    )
 
-    copy_artifacts(
+#gym(
+ #     export_method: "app-store",
+  #    scheme: "Trio",
+   #   output_name: "Trio.ipa",
+    #  configuration: "Release",
+    #  destination: 'generic/platform=iOS',
+    #  buildlog_path: 'buildlog'
+    #)
+
+copy_artifacts(
       target_path: "artifacts",
       artifacts: ["*.mobileprovision", "*.ipa", "*.dSYM.zip"]
     )
